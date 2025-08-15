@@ -54,7 +54,6 @@ float calculate_slope(float x[], float y[], int size_of_arr) {
     printf("Error: Invalid input in calculate_slope");
     return INFINITY;
   }
-  float slope;
   float cov_x_y, var_x;
   cov_x_y = covariance(x, y, size_of_arr);
   var_x = variance(x, size_of_arr);
@@ -66,9 +65,7 @@ float calculate_slope(float x[], float y[], int size_of_arr) {
   if (isinf(var_x) || isinf(cov_x_y) || fabs(var_x) < TOLERANCE)
     return INFINITY;
 
-  slope = cov_x_y / var_x;
-
-  return slope;
+  return cov_x_y / var_x;
 }
 
 float calculate_intercept(float x[], float y[], float slope, int size_of_arr) {
