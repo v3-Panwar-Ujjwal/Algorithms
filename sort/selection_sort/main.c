@@ -29,7 +29,7 @@ void selection_sort(int *arr, int size_of_arr) {
     return;
   }
   int i, j, min_index;
-  for (i = 0; i < size_of_arr - 2; i++) {
+  for (i = 0; i < size_of_arr - 1; i++) {
     min_index = i;
     j = i + 1;
     while (j < size_of_arr) {
